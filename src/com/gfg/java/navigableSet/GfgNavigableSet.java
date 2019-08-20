@@ -1,10 +1,11 @@
 package com.gfg.java.navigableSet;
 
+import java.util.NavigableSet;
 import java.util.TreeSet;
 
 public class GfgNavigableSet {
-	
-	// https://www.geeksforgeeks.org/treeset-pollfirst-method-in-java/
+		
+	// https://www.geeksforgeeks.org/navigableset-pollfirst-method-in-java/
 
 	private GfgNavigableSet() {}
 
@@ -15,55 +16,79 @@ public class GfgNavigableSet {
 	}
 	
 	private static void example_01() {
-		// creating TreeSet
-		TreeSet<Integer> ts = new TreeSet<Integer>();
+		NavigableSet<Integer> ns = new TreeSet<>();
+		ns.add(0);
+		ns.add(1);
+		ns.add(2);
+		ns.add(3);
+		ns.add(4);
+		ns.add(5);
+		ns.add(6);
 		
-		// Adding element to the TreeSet
-		ts.add(0);
-		ts.add(1);
-		ts.add(2);
-		ts.add(3);
-		ts.add(4);
-		ts.add(5);
-		ts.add(6);
-		
-		// before removing element
-		System.out.println("Before removing " + "element from TreeSet: " + ts);
-		
-		// first element is removed
-		System.out.println("First lowest element " + "removed is : " + ts.pollFirst());
-		System.out.println("After removing element" + " from TreeSet: " + ts);
+		System.out.println("First lowest element removed is : " + ns.pollFirst());
 	}
 	
 	private static void example_02() {
-        // creating TreeSet 
-        TreeSet<String> ts = new TreeSet<String>();
+        NavigableSet<String> ns = new TreeSet<>();
+        ns.add("A");
+        ns.add("B");
+        ns.add("C");
+        ns.add("D");
+        ns.add("E");
+        ns.add("F");
+        ns.add("G");
         
-        // removing element when TreeSet is empty 
-        System.out.println("pollFirst() method when " + "TreeSet is empty  :  " + ts.pollFirst());
-        
-        // adding element to the TreeSet
-        ts.add("Geeks"); 
-        ts.add("for"); 
-        ts.add("Geek"); 
-        
-        // before removing element
-        System.out.println("Before removing element from" + " TreeSet: " + ts);
-        
-        // first element is removed
-        System.out.println("First lowest element removed is : " + ts.pollFirst()); 
-        System.out.println("After removing element " + "from TreeSet: " + ts);         
+        System.out.println("First lowest element removed is : " + ns.pollFirst());
 	}
 	
+	// https://www.geeksforgeeks.org/navigableset-java-examples/
 	private static void example_03() {
-        // creating TreeSet 
-        TreeSet<String> ts = new TreeSet<String>();
-        
-        // before removing element 
-        System.out.println("Before removing " + "element from TreeSet: " + ts); 
-  
-        // first element is removed 
-        System.out.println("First lowest element " + "removed is : " + ts.pollFirst()); 
-        System.out.println("After removing element" + " from TreeSet: " + ts);
-	}	
+		NavigableSet<Integer> ns = new TreeSet<>();
+		ns.add(0);
+		ns.add(1);
+		ns.add(2);
+		ns.add(3);
+		ns.add(4);
+		ns.add(5);
+		ns.add(6);
+		
+		// Get a reverse view of the navigable set
+		NavigableSet<Integer> reverseNs = ns.descendingSet();
+		
+		// Print the normal and reverse view
+		System.out.println("Normal order: " + ns);
+		System.out.println("Reverse order: " + reverseNs);
+		
+		NavigableSet<Integer> threeOrMore = ns.tailSet(3, true);
+		System.out.println("3 or more: " + threeOrMore);
+		System.out.println("lower(3): " + ns.lower(3));
+		System.out.println("floor(3): " + ns.floor(3));
+		System.out.println("higher(3): " + ns.higher(3));
+		System.out.println("ceiling(3): " + ns.ceiling(3));
+		
+		System.out.println("pollFirst(): " + ns.pollFirst());
+		System.out.println("Navigable Set: " + ns);
+		
+		System.out.println("pollLast(): " + ns.pollLast());
+		System.out.println("Navigable Set: " + ns);
+		
+		System.out.println("pollFirst(): " + ns.pollFirst());
+		System.out.println("Navigable Set: " + ns);
+		
+		System.out.println("pollFirst(): " + ns.pollFirst());
+		System.out.println("Navigable Set: " + ns);
+		
+		System.out.println("pollFirst(): " + ns.pollFirst());
+		System.out.println("Navigable Set: " + ns);
+		
+		System.out.println("pollFirst(): " + ns.pollFirst());
+		System.out.println("pollLast(): " + ns.pollLast());
+		
+	}
+	
+	// Bonus!
+	// What is a view of a collection?
+	// https://stackoverflow.com/questions/18902484/what-is-a-view-of-a-collection
+	// https://en.wikipedia.org/wiki/View_(SQL)
+	// In a database, a view is the result set of a stored query on the data, which the database users can query just as they would in a persistent database collection object. 
 }
