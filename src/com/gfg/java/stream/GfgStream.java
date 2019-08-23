@@ -53,6 +53,7 @@ public class GfgStream {
 	
 	private static void example_01() {
 		// https://futurecreator.github.io/2018/08/26/java-8-streams/
+		// https://www.geeksforgeeks.org/stream-in-java/
 		// 1. 배열 스트림
 		String[] arr = new String[] {"a", "b", "c"};
 		Stream<String> stream = Arrays.stream(arr);
