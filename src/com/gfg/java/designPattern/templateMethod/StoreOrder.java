@@ -1,4 +1,4 @@
-package com.gfg.java.templateMethodPattern;
+package com.gfg.java.designPattern.templateMethod;
 
 // https://www.geeksforgeeks.org/template-method-design-pattern/
 //Concrete class(Subclass)

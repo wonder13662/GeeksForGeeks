@@ -1,7 +1,7 @@
 package com.gfg.java.binaryArraySort;
 
 public class GfgBinaryArraySort {
-	// // https://practice.geeksforgeeks.org/problems/binary-array-sorting/0
+	// https://practice.geeksforgeeks.org/problems/binary-array-sorting/0
 	public static void main(String[] args) {
 		GfgBinaryArraySort obj = new GfgBinaryArraySort();
 		int arr[] = {64, 34, 25, 12, 22, 11, 90};
